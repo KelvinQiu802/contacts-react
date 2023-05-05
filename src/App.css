@@ -40,3 +40,10 @@
 .read-the-docs {
   color: #888;
 }
+
+.contact {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  padding: 5px;
+}
