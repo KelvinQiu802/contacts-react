@@ -3,7 +3,7 @@ import React from 'react';
 import Contact from './Contact';
 import { nanoid } from 'nanoid';
 
-function AllContacts() {
+function AllContacts({ update }) {
   const [contacts, setContacts] = React.useState([]);
 
   React.useEffect(() => {
@@ -11,7 +11,7 @@ function AllContacts() {
       const result = await axios.get('http://localhost:7070/api/contacts');
       setContacts(result.data);
     })();
-  }, []);
+  }, [update]);
 
   return (
     <>
