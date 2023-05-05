@@ -3,7 +3,7 @@ import React from 'react';
 import Contact from './Contact';
 import { nanoid } from 'nanoid';
 
-function AllContacts({ update }) {
+function AllContacts({ update, setUpdate }) {
   const [contacts, setContacts] = React.useState([]);
 
   React.useEffect(() => {
@@ -17,7 +17,13 @@ function AllContacts({ update }) {
     <>
       <h2>Contacts</h2>
       {contacts.map((c) => (
-        <Contact key={nanoid()} name={c.name} number={c.number} />
+        <Contact
+          key={nanoid()}
+          id={c.id}
+          name={c.name}
+          number={c.number}
+          setUpdate={setUpdate}
+        />
       ))}
     </>
   );

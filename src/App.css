@@ -59,3 +59,12 @@
   background-color: #f6f2f2;
   margin-top: 15px;
 }
+
+.del-btn {
+  font-weight: bold;
+}
+
+.del-btn:hover {
+  cursor: pointer;
+  color: red;
+}

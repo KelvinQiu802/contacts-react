@@ -7,7 +7,7 @@ function App() {
   const [update, setUpdate] = React.useState(true);
   return (
     <>
-      <AllContacts update={update} />
+      <AllContacts update={update} setUpdate={setUpdate} />
       <hr />
       <CreateContact setUpdate={setUpdate} />
     </>
